@@ -1,0 +1,40 @@
+##############################################################
+# Basic                                                      #
+##############################################################
+basic:
+
+    ### Files ###                                                     
+    - type:        file
+      extension:   .gitignore
+      description: Git ignore file      
+
+    - type:        file
+      extension:   .gitkeep
+      description: Git trick file      
+
+    - type:        file
+      extension:   .gitmodules
+      description: Git submodules file      
+
+    ### Directories ###                                                     
+    - type:        directory
+      name:        cvs
+      description: CVS directory
+
+    - type:        directory
+      name:        .git
+      description: Git directory
+
+    - type:        directory
+      name:        .svn
+      description: Subversion directory
+
+    - type:        directory
+      name:        _svn
+      description: Subversion directory
+
+##############################################################
+# Extended                                                   #
+##############################################################
+extended:
+      

@@ -1,0 +1,37 @@
+##############################################################
+# Basic                                                      #
+##############################################################
+basic:
+
+    ### Files ###                                                     
+    - type:        file
+      extension:   .bz2
+      description: BZIP2 compressed archive
+    
+    - type:        file
+      extension:   .rar
+      description: RAR compressed archive
+    
+    - type:        file
+      extension:   .tar
+      description: TAR archive
+    
+    - type:        file
+      extension:   .zip
+      mime-type:
+        - application/x-compressed
+        - application/x-zip-compressed
+        - application/zip
+        - multipart/x-zip
+      description: ZIP compressed archive
+
+##############################################################
+# Extended                                                   #
+##############################################################
+extended:
+
+    ### Files ###                                                     
+    - type:        file
+      extension:   .arj
+      description: ARJ compressed archive
+      

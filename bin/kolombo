@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+<?php
+// Get PEAR install path from PHP include path
+$pearPath = '';
+$includePaths = explode(PATH_SEPARATOR, get_include_path());
+foreach($includePaths as $path) {
+    if (false !== strpos($path, 'pear')) {
+        $pearPath = $path;
+        break;
+    }
+}
+
+// Set autoloader up
+require_once 'Symfony/Component/ClassLoader/UniversalClassLoader.php';
+use Symfony\Component\ClassLoader\UniversalClassLoader;
+$loader = new UniversalClassLoader();
+$loader->registerNamespaces(
+    array(
+        'Kolombo'  => __DIR__ . '/../library',
+        'Symfony' => $pearPath,
+    )
+);
+$loader->register();
+
+
+$application = new \Kolombo\Console\Application();
+$application->run();

@@ -1,0 +1,53 @@
+##############################################################
+# Basic                                                      #
+##############################################################
+basic:
+
+    ### Files ###                                                     
+    - type:        file
+      extension:   .bak
+      description: Generic backup file      
+      
+    - type:        file
+      extension:   .tmp
+      description: Generic temporary file            
+      
+    - type:        file
+      extension:   .temp
+      description: Generic temporary file                  
+
+    ### Directories ###
+    - type:        directory
+      name:        backup
+      description: Generic backup directory                  
+
+    - type:        directory
+      name:        bak
+      description: Generic backup directory                  
+
+##############################################################
+# Extended                                                   #
+##############################################################
+extended:
+
+    ### Files ###                                                     
+    - type:        file
+      extension:   .###
+      description: Generic temporary file
+    
+    - type:        file
+      extension:   .#$#
+      description: ULead Photoimpact temporary file
+    
+    - type:        file
+      extension:   .#$-
+      description: Generic temporary file
+    
+    - type:        file
+      extension:   .#$1
+      description: Generic temporary file
+    
+    - type:        file
+      extension:   .#$3
+      description: Generic temporary file
+      
